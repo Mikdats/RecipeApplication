@@ -84,7 +84,7 @@ namespace RecipeApplication.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("Index","User");
+            return RedirectToAction("Index","Home");
         }
         
     }

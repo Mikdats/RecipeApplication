@@ -27,7 +27,7 @@
                       <label class= "text-danger" > @Html.ValidationMessageFor(b => b.Image) </label>
                       <br/>                         
                       @Html.Label("Detay")
-                      @Html.TextBoxFor(b => b.Detail, new { @class = "form-control" })
+                      @Html.TextAreaFor(b => b.Detail, new { @class = "form-control" })
                       <label class= "text-danger" > @Html.ValidationMessageFor(b => b.Detail)</label>
                       <br/>                         
                       <button class= "btn btn-success" > Kaydet </button>              
