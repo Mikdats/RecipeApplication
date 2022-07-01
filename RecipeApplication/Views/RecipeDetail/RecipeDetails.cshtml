@@ -1,0 +1,67 @@
+﻿@using Entities.Concrete
+@model List<Recipe>
+@{
+    ViewData["Title"] = "RecipeDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var item in Model)
+{
+    <section id="recipe">
+        <div class="container">
+            <div class="row">
+                <!-- Title -->
+            <div class="col-12">
+                    <h2>@item.Title</h2>
+                </div>
+            </div>
+            <div class="row vertical-align">
+                <div class="col-12">
+                    <!-- Picture -->
+                <div class="col-md-8 pull-left wow swing">
+                        <img src="@item.Image" class="recipe-picture" style="width:520px;height:340px" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Ingredients -->
+    <div class="row wow slideInUp">
+            <div class="col-12">
+                <div class="recipe-ingredients">
+                    <h3>Ingredients</h3>
+                    <dl class="ingredients-list">
+                        <dt>10</dt>
+                        <dd>country-style pork ribs</dd>
+                        <dt>2</dt>
+                        <dd>tablespoons garlic powder</dd>
+                        <dt>1</dt>
+                        <dd>tablespoon salt</dd>
+                        <dt>1</dt>
+                        <dd>tablespoon pepper</dd>
+                        <dt>2</dt>
+                        <dd>cups of your favorite barbecue sauce</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- Directions -->
+    <div class="row wow slideInUp">
+            <div class="col-12">
+                <div class="recipe-directions">
+                    <h3>Directions</h3>
+                    <ol>
+                        <li>@item.Detail</li>                      
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <!-- Back to recipes -->
+    <div class="row wow rollIn">
+            <div class="col-12 text-center">
+                <a href="/Home/Index">
+                    <i class="fa fa-backward" aria-hidden="true"></i>
+                    Go to back to recipes.
+                </a>
+            </div>
+        </div>
+    </section>
+}

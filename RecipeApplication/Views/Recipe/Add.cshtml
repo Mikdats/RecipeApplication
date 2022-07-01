@@ -1,0 +1,45 @@
+﻿@using Entities.Concrete
+@model Recipe
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+   <br/>
+   <div class= "container" >
+        <div class= "row" >
+             <div class= "col-2" >
+              </div>
+              <div class= "col-8" >
+                   <h2> Yeni Yemek Ekle</h2>
+                @using (Html.BeginForm("Add", "Recipe", FormMethod.Post))
+                {
+                      @Html.Label("Yemek Adı")
+                      @Html.TextBoxFor(b => b.Title, new { @class = "form-control" })
+                      <label class= "text-danger" > @Html.ValidationMessageFor(b => b.Title) </label>
+                      <br/>                         
+                      @Html.Label("Kategori Adı")
+                       @Html.DropDownListFor(b => b.CategoryId, (List<SelectListItem>)ViewBag.List, new { @class = "form-control" })
+                      <label class= "text-danger" > @Html.ValidationMessageFor(b => b.CategoryId) </label>
+                      <br/>                         
+                      @Html.Label("Yemek Resmi")
+                      @Html.TextBoxFor(b => b.Image, new { @class = "form-control" })
+                      <label class= "text-danger" > @Html.ValidationMessageFor(b => b.Image) </label>
+                      <br/>                         
+                      @Html.Label("Detay")
+                      @Html.TextBoxFor(b => b.Detail, new { @class = "form-control" })
+                      <label class= "text-danger" > @Html.ValidationMessageFor(b => b.Detail)</label>
+                      <br/>                         
+                      <button class= "btn btn-success" > Kaydet </button>              
+                      <input type = "reset" value = "Temizle" class= "btn btn-danger"/>
+                      <a class="btn btn-primary" href="~/Recipe/GetAll" role="button">Geri Dön</a>
+                }
+        </div>
+        <div class= "col-2">
+         </div>
+     </div>
+ </div>
+
+
+
+

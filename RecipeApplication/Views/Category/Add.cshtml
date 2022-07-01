@@ -1,0 +1,35 @@
+﻿@using Entities.Concrete
+@model Category
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+   <br/>
+   <div class= "container" >
+        <div class= "row" >
+             <div class= "col-2" >
+              </div>
+              <div class= "col-8" >
+                   <h2> Yeni Kategori Ekle</h2>
+                @using (Html.BeginForm("Add", "Category", FormMethod.Post))
+                {
+                    @Html.Label("Kategori Adı")
+                    @Html.TextBoxFor(b => b.CategoryName, new { @class = "form-control" })
+                    <label class= "text-danger" > @Html.ValidationMessageFor(b => b.CategoryName) </label>
+                     <br/>                         
+                    <button class= "btn btn-success" > Kaydet </button>              
+                    <input type = "reset" value = "Temizle" class= "btn btn-danger"/>
+                    <a class="btn btn-primary" href="~/Category/GetAll" role="button">Geri Dön</a>
+                }
+        </div>
+        <div class= "col-2">
+         </div>
+     </div>
+ </div>
+
+
+
+
+
+

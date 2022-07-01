@@ -1,0 +1,60 @@
+﻿@using Entities.Concrete
+@model List<Recipe>
+@{
+    ViewData["Title"] = "CategoryDetailView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="categories">
+    <div class="container">
+        <div class="row">
+            <div class="col-12" >
+                <h2>Categories</h2>
+            </div>
+        </div>       
+        <div class="row wow zoomIn">
+            @foreach (Category item in ViewBag.categories)
+            {               
+                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+                    <div class="category-item text-center" >
+                        <br />
+                        <a href="/CategoryDetailView/CategoryDetailViews/@item.CategoryId" style="color:white">@item.CategoryName</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<section id="items">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Recipes</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach(Recipe item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+                 <div class="recipe-item text-center">
+                    <a href="/RecipeDetail/RecipeDetails/@item.Title">
+                        <img style="width:270px;height:220px"  src="@item.Image"  />
+                    </a>
+                    <br />
+                    <h3>@item.Title</h3>
+                 </div>
+                </div>
+            }
+            <!-- First recipe item -->           
+        </div>
+    </div>
+     <div class="row wow rollIn">
+            <div class="col-12 text-center">
+                <a href="/Home/Index">
+                    <i class="fa fa-backward" aria-hidden="true"></i>
+                    Go to back to Menu.
+                </a>
+            </div>
+        </div>
+</section>
+

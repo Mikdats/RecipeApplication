@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic meta info
+  ==================== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Book</title>
+
+  <!-- Favicon
+  ============ -->
+  <link rel="apple-touch-icon" sizes="57x57" href="~/recipe/images/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="~/recipe/images/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="~/recipe/images/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="~/recipe/images/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="~/recipe/images/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="~/recipe/images/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="~/recipe/images/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="~/recipe/images/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="~/recipe/images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="~/recipe/images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="~/recipe/images/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="~/recipe/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="~/recipe/images/favicon/favicon-96x96.png" />
+
+  <!-- CSS files
+  ============== -->
+  <partial name="ViewComponents/ViewComponent/_Style"/>
+
+  <!-- Modernizr file
+  =================== -->
+  <script charset="utf-8" type="text/javascript "src="~/recipe/js/modernizr.custom.js"></script>
+
+</head>
+<body>
+
+  <!-- Splash Screen
+  ================== -->
+  <div id="splash"></div>
+
+  <!-- Website Logo (Header)
+  ================= -->
+   <partial name="ViewComponents/ViewComponent/_Header"/>
+
+  <!-- Recipes Categories
+  ======================= -->
+
+  <!-- Recipes Items
+  ================== -->
+  
+  @RenderBody()
+
+  <!-- Website Footer
+  =================== --> 
+   <partial name="ViewComponents/ViewComponent/_Footer" />
+
+  <!-- JavaScript files
+  ===================== -->
+  <partial name="ViewComponents/ViewComponent/_Javascript"/>
+</body>
+
+</html>

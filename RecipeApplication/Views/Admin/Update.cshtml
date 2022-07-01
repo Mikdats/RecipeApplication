@@ -1,0 +1,48 @@
+﻿@using Entities.Concrete
+@model  User
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <h4 class="text-success">Düzenleme Sayfası</h4>
+        <br />
+        <form asp-action="Update" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserId" />
+            <div class="form-group">
+                E-Posta
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                Kullanıcı Adı
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               Şifre
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>                
+            <div class="form-group">
+                Rol Id
+                <input asp-for="RoleId" class="form-control" />
+                <span asp-validation-for="RoleId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Kaydet " class="btn btn-success" />
+                <input type="reset" value="Temizle" class="btn btn-danger" />
+                <a asp-action="GetAll" class="btn btn-primary">Kullanıcı Listesine Dön</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+
+
