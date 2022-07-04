@@ -13,7 +13,7 @@
         <thead>
             <tr>               
                 <th>Kategori Adı</th>                             
-                <th>Kategori Detay</th>                             
+                                           
                 <th>Düzenle</th>
                 <th>Sil</th>
             </tr>
@@ -24,11 +24,7 @@
             <tr>             
                 <td>
                     @Html.DisplayFor(modelItem => item.CategoryName)
-                </td>    
-                 <td>
-                    <a asp-action="Recipe/RecipeDetail" asp-route-id="@item.CategoryId" class="btn btn-primary btn-sm"> Detay</a>
-
-                </td>
+                </td>                
                 <td>
                     <a asp-action="Update" asp-route-id="@item.CategoryId" class="btn btn-success btn-sm"><i class="bi bi-pencil"></i> Düzenle</a>
 

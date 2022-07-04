@@ -11,6 +11,7 @@ namespace Entities.Concrete
         public int CategoryId { get; set; }
         public string Title { get; set; }     
         public string Image { get; set; }
+        public string Ingredients { get; set; }
         public string Detail { get; set; }
         public Category Category { get; set; }
         

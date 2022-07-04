@@ -26,34 +26,26 @@
         <!-- Ingredients -->
     <div class="row wow slideInUp" style="display: flex;justify-content: center;">
             <div class="col-8">
-                <div class="recipe-ingredients">
+                <div class="recipe">
                     <h3>Ingredients</h3>
                     <dl class="ingredients-list">
-                        <dt>10</dt>
-                        <dd>country-style pork ribs</dd>
-                        <dt>2</dt>
-                        <dd>tablespoons garlic powder</dd>
-                        <dt>1</dt>
-                        <dd>tablespoon salt</dd>
-                        <dt>1</dt>
-                        <dd>tablespoon pepper</dd>
-                        <dt>2</dt>
-                        <dd>cups of your favorite barbecue sauce</dd>
+                       <li>@item.Ingredients</li>
                     </dl>
                 </div>
             </div>
         </div>
         <!-- Directions -->
-    <div class="row wow slideInUp"  style="display: flex;justify-content: center;">
+          <div class="row wow slideInUp" style="display: flex;justify-content: center;">
             <div class="col-8">
-                <div class="recipe-directions">
-                    <h3>Recipe Detail</h3>
-                    <ol>
-                        <li>@item.Detail</li>                      
-                    </ol>
+                <div class="recipe">
+                    <h3>Recipe</h3>
+                    <dl class="recipe-list">
+                       <li>@item.Detail</li>
+                    </dl>
                 </div>
             </div>
         </div>
+
         <!-- Back to recipes -->
     <div class="row wow rollIn">
             <div class="col-12 text-center">
